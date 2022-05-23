@@ -1,6 +1,7 @@
 # Hangman_Project
 
 A simple game of Hangman in Python using OOP.
+
 Play hangman from a selection of 370,000 words! 
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
