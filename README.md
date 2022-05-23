@@ -5,7 +5,13 @@ Play hangman from a selection of 370,000 words!
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
+Using 
+
 # Running the Program 
+
+## Requirements 
+
+Python
 
 ## Within the Hangman_Project folder run: 
 
