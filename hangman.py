@@ -57,7 +57,7 @@ class Hangman:
        # Player choice is returned to be used inside future methods. 
         return player_choice
 
-    def choose_random_word(self):
+    def choose_random_word(self, file_name):
 
         '''
         Method for the program to choose a random word from a text file
@@ -65,7 +65,7 @@ class Hangman:
         '''
 
         # Open the text file 
-        with open("words.txt", "r") as file:
+        with open(f"{file_name}.txt", "r") as file:
         # Choose a random word from said text file by iterating through the text file. 
             
                 # For each row in the file, read each line, and split each of the lines. 
@@ -77,13 +77,13 @@ class Hangman:
         
         # Print that word (for debugging purposes)
 
-    def convert_random_word(self):
+    def convert_random_word(self, file_name):
         '''
         Method to convert the random word generated within the words.txt file into a list of underscores
 
         '''
         # Choose a random word 
-        random_word = self.choose_random_word()
+        random_word = self.choose_random_word(file_name)
 
         # Set the length of that word to the number of characters.
           
@@ -105,7 +105,7 @@ class Hangman:
 
         
     
-    def check_letter(self):
+    def check_letter(self, file_name):
 
         '''
         Method to check the letter that the user has input.
@@ -113,7 +113,7 @@ class Hangman:
         '''
         #TODO: Change the names of the weird variable names 
         # Sets the random_word generated from this method to a variable. 
-        random_word = self.convert_random_word()[1]
+        random_word = self.convert_random_word(file_name)[1]
 
         # While the number of lives the player has is greater than 0 
         while self.lives > 0:
@@ -198,12 +198,6 @@ class Hangman:
         pass
             
                 
-    
-
-    def play_game(self):
-        new_game = Hangman(5)
-        new_game.choose_random_word()
-        new_game.check_letter()
         
         
 
@@ -211,5 +205,4 @@ class Hangman:
 if __name__ == "__main__":
 
     new_game = Hangman(5)
-    new_game.play_game()
-    new_game.play_again()
+    new_game.check_letter("words")
