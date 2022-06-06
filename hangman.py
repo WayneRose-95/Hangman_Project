@@ -171,6 +171,7 @@ class Hangman:
             elif stored_player_input not in random_word:
                 print('incorrect letter')
                 self.letters_chosen.append(stored_player_input)
+                print(self.word_list)
                 print(self.letters_chosen)
                 self.lives -= 1
                 print(f'You have {self.lives} lives remaining')
